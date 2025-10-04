@@ -27,7 +27,7 @@ Incluye autenticación, panel de usuario, estadísticas y generación de reporte
 |-------------|----------------------|
 | **Laravel** | 12.32.5 |
 | **PHP** | 8.2.12 |
-| **Base de datos** | MySQL / MariaDB |
+| **Base de datos** | MySQL |
 | **Frontend** | Blade Templates + Bootstrap 5 |
 | **PDF** | barryvdh/laravel-dompdf |
 | **Autenticación** | Laravel Breeze / Auth |
