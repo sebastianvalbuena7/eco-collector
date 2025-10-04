@@ -36,8 +36,67 @@ Incluye autenticación, panel de usuario, estadísticas y generación de reporte
 ---
 
 ## ⚙️ Instalación y configuración
+🧩 Requisitos previos
 
-### 1️⃣ Clonar el repositorio
-```bash
+Asegúrate de tener instalado:
+
+PHP 8.2 o superior
+
+Composer
+
+XAMPP (o cualquier servidor con MySQL)
+
+Node.js y npm (para compilar assets si aplica)
+
+⚙️ Configuración del entorno
+1️⃣ Clonar el repositorio
 git clone https://github.com/sebastianvalbuena7/eco-collector.git
 cd eco-collector
+
+2️⃣ Instalar dependencias
+composer install
+npm install
+npm run build   # o npm run dev si estás en modo desarrollo
+
+3️⃣ Crear el archivo .env
+
+Copia el archivo de ejemplo:
+
+cp .env.example .env
+
+4️⃣ Configurar la base de datos
+
+Abre XAMPP y asegúrate de que MySQL esté ejecutándose.
+
+En http://localhost/phpmyadmin
+, crea una base de datos llamada:
+
+eco_collect
+
+
+Abre el archivo .env y configura las variables así:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=eco_collect
+DB_USERNAME=root
+DB_PASSWORD=
+
+SESSION_DRIVER=file
+
+5️⃣ Generar la key de la aplicación
+php artisan key:generate
+
+6️⃣ Ejecutar las migraciones
+
+Esto creará todas las tablas necesarias en la base de datos:
+
+php artisan migrate
+
+7️⃣ Iniciar el servidor
+php artisan serve
+
+
+Luego abre en tu navegador:
+👉 http://127.0.0.1:8000
