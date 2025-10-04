@@ -37,16 +37,9 @@ Incluye autenticación, panel de usuario, estadísticas y generación de reporte
 
 ## ⚙️ Instalación y configuración
 🧩 Requisitos previos
-
-Asegúrate de tener instalado:
-
-PHP 8.2 o superior
-
-Composer
-
-XAMPP (o cualquier servidor con MySQL)
-
-Node.js y npm (para compilar assets si aplica)
+- PHP 8.2 o superior
+- Composer
+- XAMPP (o cualquier servidor con MySQL)
 
 ⚙️ Configuración del entorno
 1️⃣ Clonar el repositorio
@@ -61,8 +54,7 @@ npm run build   # o npm run dev si estás en modo desarrollo
 3️⃣ Crear el archivo .env
 
 Copia el archivo de ejemplo:
-
-cp .env.example .env
+.env
 
 4️⃣ Configurar la base de datos
 
